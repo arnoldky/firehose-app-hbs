@@ -1,0 +1,10 @@
+<div class="smurfy span6 offset4 text-center">
+<h1 class="custom-h1"> Fill up the form please :) <h1/>
+	<%= simple_form_for @pic do |f| %>
+		<%= f.input :title,  label: 'Your name!?',placeholder: 'Mr. Chan?' %>
+		<%= f.input :subtitle,  label: 'your ageeee!?' %>
+		<%= f.input :message,  label: 'tellll me about urself' %>
+
+		<%= f.submit "Save",:class => "btn btn-info" %>
+	<% end %>
+<div/>
