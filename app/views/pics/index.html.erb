@@ -1,19 +1,26 @@
-<% @pics.each do |pic| %>
-
-<div class="smurfy span4 text-center">
-	<h1 class="custom-h1">
-	Title: <%= pic.title %>
-	<br/>
-	<h1/>
-	<h2>
-	Subtitle: <%= pic.subtitle %>
-	<br/>
-
-	Message: <%= pic.message %>
-	<br/>
-	<h2/>
 
 
-</div>
+<% @pics.each_slice(3) do |slice| %>
+        <div class="row">
+                <% slice.each do |pic| %>
+                        <div class="span4 smurfy text-center">
+                                <h1 class="custom-h1">
+                                
+                                <%= pic.title %>
+                                </h1>
+                                </br>
+                                <h2 class="custom-h2">
+                       
+                                <%= pic.subtitle %>
+                                </br>
+                
+                                <%= pic.message %>
+                                </h2>
+                                <%= image_tag pic.avatar %>
+                        </div>
+                <% end %>
+        </div>
 
+        <br />
+        <br />
 <% end %>
